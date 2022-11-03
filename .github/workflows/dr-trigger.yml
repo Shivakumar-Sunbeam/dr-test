@@ -34,3 +34,13 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  test:
+     runs-on: ubuntu-latest
+     # needs lets you run jobs sequesntially by leting github know the dependencies rather than running parallely.
+     needs: [build]
+     steps:
+     
+     - name: Run test
+       run: |
+          echo "Running test"
+          echo " test ran "
