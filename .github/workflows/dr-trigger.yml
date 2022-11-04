@@ -39,6 +39,7 @@ jobs:
         run: |
           echo "My name is $Name"
           echo test, and deploy your project.
+          echo " our secret message is '${{ secrets.SECRET1 }}'"
   test:
      runs-on: ubuntu-latest
      # needs lets you run jobs sequesntially by leting github know the dependencies rather than running parallely.
